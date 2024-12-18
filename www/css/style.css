@@ -145,6 +145,16 @@ textarea.form-control {
     color: white;
 }
 
+.btnA {
+    background-color: yellow;
+    color: green;
+}
+    
+.btnB {
+    background-color: yellow;
+    color: green;
+}
+
 .btn-danger:hover {
     background-color: #c82333;
 }
@@ -249,13 +259,13 @@ textarea.form-control {
 }
 
 .btn-edit {
-    background-color: #28a745;
+    background-color: #2ec050;
     color: white;
     cursor: pointer;
 }
 
 .btn-edit:hover {
-    background-color: #218838;
+    background-color: #00f535;
 }
 
 .btn-delete {
@@ -266,6 +276,14 @@ textarea.form-control {
 
 .btn-delete:hover {
     background-color: #c82333;
+}
+
+.btnA:hover{
+    background-color: #0056b3;
+}
+
+.btnB:hover{
+    background-color: #007bff;
 }
 
 .post-content {
