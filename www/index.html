@@ -184,6 +184,12 @@ function createPostElement(post) {
                 <!-- 編集権限があれば、編集・削除機能を表示 -->
                 ${actions}
             </div>
+             <button class="btnA" onclick="changeColorA">
+                D
+            </button>  
+            <button class="btnB" onclick="changeColorB">
+                BAD
+            </button>
             <div class="post-content">${escapeHtml(post.content)}</div>
             <div class="edit-form">
                 <textarea class="form-control" id="edit-${post.id}"></textarea>
@@ -348,6 +354,15 @@ function cancelEdit(postId) {
     postElement.removeClass('editing');
     postElement.find('textarea').val('');
 }
+
+function changeColorA(){
+    $(".post-content").css("color","green");
+}
+
+function changeColorB(){
+    $(".post-content").css("color","red");
+}
+
 
 // 投稿の更新
 function updatePost(postId) {
@@ -616,8 +631,6 @@ window.addEventListener('unload', function() {
                 <button onclick="closeModal('deleteModal')" class="btn-cancel">キャンセル</button>
             </div>
         </div>
-    </div>
-    <button id="btnA">GOOD</button>  
-    <button id="btnB">BAD</button>  
+    </div>  
 </body>
 </html>
