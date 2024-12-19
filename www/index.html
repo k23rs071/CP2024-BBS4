@@ -194,6 +194,12 @@ function createPostElement(post) {
             <div class="edit-form">
                 <textarea class="form-control" id="edit-${post.id}"></textarea>
                 <div class="button-group">
+                    <button class="btnA" onclick="changeColorA">
+                        D
+                    </button>  
+                    <button class="btnB" onclick="changeColorB">
+                        BAD
+                    </button>
                     <button class="btn-primary" onclick="updatePost('${post.id}')">
                         更新
                     </button>
@@ -356,11 +362,19 @@ function cancelEdit(postId) {
 }
 
 function changeColorA(){
-    $(".post-content").css("color","green");
+    currentEditId = postId;
+    const post = $(`#post-${postId}`);
+    const content = post.find('.post-content').text();
+    
+    $('#editContent').val(content);
+    updateCharacterCount('editContent', 'editContentCount', 1000);
+    showModal('editModal');
 }
 
 function changeColorB(){
-    $(".post-content").css("color","red");
+    const postElement = $(`#post-${postId}`);
+    postElement.removeClass('editing');
+    postElement.find('textarea').val('');
 }
 
 
